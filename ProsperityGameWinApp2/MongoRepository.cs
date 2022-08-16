@@ -145,6 +145,15 @@ namespace ProsperityGameWinApp2
             var collection = _db.GetCollection<Goal>("Goals");
             collection.InsertOneAsync(record);
         }
+
+        public List<ProsperityStatus> GetBuyList()
+        {
+            var collection = _db.GetCollection<ProsperityStatus>("ProsperityStats");
+            var filter = new BsonDocument();
+            var result = collection.Find(filter).ToList();
+            return result;
+        }
+
         public List<Goal> GetGoalsList()
         {
             var collection = _db.GetCollection<Goal>("Goals");
@@ -198,7 +207,7 @@ namespace ProsperityGameWinApp2
             return list;
         }
 
-        public void AddUserActivity(ObjectId taskId, string title, double time)
+        public void AddUserActivity(UserTask task, string title, double time)
         {
             var record = new UserActivity() 
             {
@@ -206,7 +215,7 @@ namespace ProsperityGameWinApp2
                 Date = DateTime.Now.Date,
                 Title = title,
                 Time = time,
-                TaskId = taskId
+                TaskId = task.Id
             };
             var collection = _db.GetCollection<UserActivity>("UserActivities");
             collection.InsertOneAsync(record);
@@ -217,6 +226,42 @@ namespace ProsperityGameWinApp2
             var filter = new BsonDocument();
             var list = collection.Find(filter).ToList();
             return list;
+        }
+
+        internal void AddThank(string title)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void AddMoney(DateTime startDate, double money, string description)
+        {
+            Insert(new ProsperityStatus()
+            {
+                Id = new ObjectId(),
+                CreditValue = money * 1000 * GetDaysFromStart(startDate),
+                Date = DateTime.Now.Date,
+                Description = description,
+                DaysFromStart = GetDaysFromStart(startDate)
+            });
+        }
+
+        private int GetDaysFromStart(DateTime StartDate)
+        {
+            var days = (DateTime.Now.Date - StartDate).TotalDays;
+            var castDays = (int)Math.Ceiling(days);
+            return castDays == 0 ? 1 : castDays;
+        }
+
+        public void AddBuy(DateTime startDate, string title, string price)
+        {
+            Insert(new ProsperityStatus()
+            {
+                Id = new ObjectId(),
+                CreditValue = -1 * double.Parse(price),
+                Date = DateTime.Now.Date,
+                Description = title,
+                DaysFromStart = GetDaysFromStart(startDate)
+            });
         }
     }
 }

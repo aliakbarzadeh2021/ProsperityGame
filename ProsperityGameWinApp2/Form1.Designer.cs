@@ -179,6 +179,7 @@ namespace ProsperityGameWinApp2
             this.label5 = new System.Windows.Forms.Label();
             this.btnAddBuy = new System.Windows.Forms.Button();
             this.btnAddActivity = new System.Windows.Forms.Button();
+            this.btnCalculate = new System.Windows.Forms.Button();
             this.mainTabControl.SuspendLayout();
             this.Goals.SuspendLayout();
             this.goalTabControl.SuspendLayout();
@@ -385,7 +386,6 @@ namespace ProsperityGameWinApp2
             // 
             // financialGoalListView
             // 
-            this.financialGoalListView.HideSelection = false;
             this.financialGoalListView.Location = new System.Drawing.Point(19, 17);
             this.financialGoalListView.Name = "financialGoalListView";
             this.financialGoalListView.Size = new System.Drawing.Size(1275, 383);
@@ -405,7 +405,6 @@ namespace ProsperityGameWinApp2
             // 
             // CareerGoalListView
             // 
-            this.CareerGoalListView.HideSelection = false;
             this.CareerGoalListView.Location = new System.Drawing.Point(14, 15);
             this.CareerGoalListView.Name = "CareerGoalListView";
             this.CareerGoalListView.Size = new System.Drawing.Size(1275, 385);
@@ -425,7 +424,6 @@ namespace ProsperityGameWinApp2
             // 
             // BodyGoalListView
             // 
-            this.BodyGoalListView.HideSelection = false;
             this.BodyGoalListView.Location = new System.Drawing.Point(14, 17);
             this.BodyGoalListView.Name = "BodyGoalListView";
             this.BodyGoalListView.Size = new System.Drawing.Size(1275, 383);
@@ -444,7 +442,6 @@ namespace ProsperityGameWinApp2
             // 
             // attractiveGoalListView
             // 
-            this.attractiveGoalListView.HideSelection = false;
             this.attractiveGoalListView.Location = new System.Drawing.Point(14, 17);
             this.attractiveGoalListView.Name = "attractiveGoalListView";
             this.attractiveGoalListView.Size = new System.Drawing.Size(1275, 383);
@@ -463,7 +460,6 @@ namespace ProsperityGameWinApp2
             // 
             // SpiritualGoalListView
             // 
-            this.SpiritualGoalListView.HideSelection = false;
             this.SpiritualGoalListView.Location = new System.Drawing.Point(14, 17);
             this.SpiritualGoalListView.Name = "SpiritualGoalListView";
             this.SpiritualGoalListView.Size = new System.Drawing.Size(1275, 383);
@@ -482,7 +478,6 @@ namespace ProsperityGameWinApp2
             // 
             // educationalGoalListView
             // 
-            this.educationalGoalListView.HideSelection = false;
             this.educationalGoalListView.Location = new System.Drawing.Point(14, 17);
             this.educationalGoalListView.Name = "educationalGoalListView";
             this.educationalGoalListView.Size = new System.Drawing.Size(1275, 383);
@@ -501,7 +496,6 @@ namespace ProsperityGameWinApp2
             // 
             // personalityGoalListView
             // 
-            this.personalityGoalListView.HideSelection = false;
             this.personalityGoalListView.Location = new System.Drawing.Point(14, 17);
             this.personalityGoalListView.Name = "personalityGoalListView";
             this.personalityGoalListView.Size = new System.Drawing.Size(1275, 383);
@@ -520,7 +514,6 @@ namespace ProsperityGameWinApp2
             // 
             // relationalGoalListView
             // 
-            this.relationalGoalListView.HideSelection = false;
             this.relationalGoalListView.Location = new System.Drawing.Point(14, 17);
             this.relationalGoalListView.Name = "relationalGoalListView";
             this.relationalGoalListView.Size = new System.Drawing.Size(1275, 383);
@@ -539,7 +532,6 @@ namespace ProsperityGameWinApp2
             // 
             // skillGoalListView
             // 
-            this.skillGoalListView.HideSelection = false;
             this.skillGoalListView.Location = new System.Drawing.Point(14, 17);
             this.skillGoalListView.Name = "skillGoalListView";
             this.skillGoalListView.Size = new System.Drawing.Size(1275, 383);
@@ -558,7 +550,6 @@ namespace ProsperityGameWinApp2
             // 
             // healthGoalListView
             // 
-            this.healthGoalListView.HideSelection = false;
             this.healthGoalListView.Location = new System.Drawing.Point(14, 17);
             this.healthGoalListView.Name = "healthGoalListView";
             this.healthGoalListView.Size = new System.Drawing.Size(1275, 383);
@@ -675,7 +666,6 @@ namespace ProsperityGameWinApp2
             // 
             // financialTargetListView
             // 
-            this.financialTargetListView.HideSelection = false;
             this.financialTargetListView.Location = new System.Drawing.Point(21, 18);
             this.financialTargetListView.Name = "financialTargetListView";
             this.financialTargetListView.Size = new System.Drawing.Size(1275, 384);
@@ -695,7 +685,6 @@ namespace ProsperityGameWinApp2
             // 
             // careerTargetListView
             // 
-            this.careerTargetListView.HideSelection = false;
             this.careerTargetListView.Location = new System.Drawing.Point(14, 17);
             this.careerTargetListView.Name = "careerTargetListView";
             this.careerTargetListView.Size = new System.Drawing.Size(1275, 384);
@@ -715,7 +704,6 @@ namespace ProsperityGameWinApp2
             // 
             // bodyTargetListView
             // 
-            this.bodyTargetListView.HideSelection = false;
             this.bodyTargetListView.Location = new System.Drawing.Point(14, 17);
             this.bodyTargetListView.Name = "bodyTargetListView";
             this.bodyTargetListView.Size = new System.Drawing.Size(1275, 384);
@@ -734,7 +722,6 @@ namespace ProsperityGameWinApp2
             // 
             // attractiveTargetListView
             // 
-            this.attractiveTargetListView.HideSelection = false;
             this.attractiveTargetListView.Location = new System.Drawing.Point(14, 17);
             this.attractiveTargetListView.Name = "attractiveTargetListView";
             this.attractiveTargetListView.Size = new System.Drawing.Size(1275, 384);
@@ -753,7 +740,6 @@ namespace ProsperityGameWinApp2
             // 
             // spiritualTargetListView
             // 
-            this.spiritualTargetListView.HideSelection = false;
             this.spiritualTargetListView.Location = new System.Drawing.Point(14, 17);
             this.spiritualTargetListView.Name = "spiritualTargetListView";
             this.spiritualTargetListView.Size = new System.Drawing.Size(1275, 384);
@@ -772,7 +758,6 @@ namespace ProsperityGameWinApp2
             // 
             // educationalTargetListView
             // 
-            this.educationalTargetListView.HideSelection = false;
             this.educationalTargetListView.Location = new System.Drawing.Point(14, 17);
             this.educationalTargetListView.Name = "educationalTargetListView";
             this.educationalTargetListView.Size = new System.Drawing.Size(1275, 384);
@@ -791,7 +776,6 @@ namespace ProsperityGameWinApp2
             // 
             // personalityTargetListView
             // 
-            this.personalityTargetListView.HideSelection = false;
             this.personalityTargetListView.Location = new System.Drawing.Point(14, 17);
             this.personalityTargetListView.Name = "personalityTargetListView";
             this.personalityTargetListView.Size = new System.Drawing.Size(1275, 384);
@@ -810,7 +794,6 @@ namespace ProsperityGameWinApp2
             // 
             // relationalTargetListView
             // 
-            this.relationalTargetListView.HideSelection = false;
             this.relationalTargetListView.Location = new System.Drawing.Point(14, 17);
             this.relationalTargetListView.Name = "relationalTargetListView";
             this.relationalTargetListView.Size = new System.Drawing.Size(1275, 384);
@@ -829,7 +812,6 @@ namespace ProsperityGameWinApp2
             // 
             // skillTargetListView
             // 
-            this.skillTargetListView.HideSelection = false;
             this.skillTargetListView.Location = new System.Drawing.Point(14, 17);
             this.skillTargetListView.Name = "skillTargetListView";
             this.skillTargetListView.Size = new System.Drawing.Size(1275, 384);
@@ -848,7 +830,6 @@ namespace ProsperityGameWinApp2
             // 
             // healthTargetListView
             // 
-            this.healthTargetListView.HideSelection = false;
             this.healthTargetListView.Location = new System.Drawing.Point(14, 17);
             this.healthTargetListView.Name = "healthTargetListView";
             this.healthTargetListView.Size = new System.Drawing.Size(1275, 384);
@@ -986,7 +967,6 @@ namespace ProsperityGameWinApp2
             // 
             // financialTaskListView
             // 
-            this.financialTaskListView.HideSelection = false;
             this.financialTaskListView.Location = new System.Drawing.Point(21, 15);
             this.financialTaskListView.Name = "financialTaskListView";
             this.financialTaskListView.Size = new System.Drawing.Size(1275, 393);
@@ -1006,7 +986,6 @@ namespace ProsperityGameWinApp2
             // 
             // careerTaskListView
             // 
-            this.careerTaskListView.HideSelection = false;
             this.careerTaskListView.Location = new System.Drawing.Point(14, 15);
             this.careerTaskListView.Name = "careerTaskListView";
             this.careerTaskListView.Size = new System.Drawing.Size(1275, 393);
@@ -1026,7 +1005,6 @@ namespace ProsperityGameWinApp2
             // 
             // bodyTaskListView
             // 
-            this.bodyTaskListView.HideSelection = false;
             this.bodyTaskListView.Location = new System.Drawing.Point(14, 15);
             this.bodyTaskListView.Name = "bodyTaskListView";
             this.bodyTaskListView.Size = new System.Drawing.Size(1275, 393);
@@ -1045,7 +1023,6 @@ namespace ProsperityGameWinApp2
             // 
             // attractiveTaskListView
             // 
-            this.attractiveTaskListView.HideSelection = false;
             this.attractiveTaskListView.Location = new System.Drawing.Point(14, 15);
             this.attractiveTaskListView.Name = "attractiveTaskListView";
             this.attractiveTaskListView.Size = new System.Drawing.Size(1275, 393);
@@ -1064,7 +1041,6 @@ namespace ProsperityGameWinApp2
             // 
             // spiritualTaskListView
             // 
-            this.spiritualTaskListView.HideSelection = false;
             this.spiritualTaskListView.Location = new System.Drawing.Point(14, 15);
             this.spiritualTaskListView.Name = "spiritualTaskListView";
             this.spiritualTaskListView.Size = new System.Drawing.Size(1275, 393);
@@ -1083,7 +1059,6 @@ namespace ProsperityGameWinApp2
             // 
             // educationalTaskListView
             // 
-            this.educationalTaskListView.HideSelection = false;
             this.educationalTaskListView.Location = new System.Drawing.Point(14, 15);
             this.educationalTaskListView.Name = "educationalTaskListView";
             this.educationalTaskListView.Size = new System.Drawing.Size(1275, 393);
@@ -1102,7 +1077,6 @@ namespace ProsperityGameWinApp2
             // 
             // personalityTaskListView
             // 
-            this.personalityTaskListView.HideSelection = false;
             this.personalityTaskListView.Location = new System.Drawing.Point(14, 15);
             this.personalityTaskListView.Name = "personalityTaskListView";
             this.personalityTaskListView.Size = new System.Drawing.Size(1275, 393);
@@ -1121,7 +1095,6 @@ namespace ProsperityGameWinApp2
             // 
             // relationalTaskListView
             // 
-            this.relationalTaskListView.HideSelection = false;
             this.relationalTaskListView.Location = new System.Drawing.Point(14, 15);
             this.relationalTaskListView.Name = "relationalTaskListView";
             this.relationalTaskListView.Size = new System.Drawing.Size(1275, 393);
@@ -1140,7 +1113,6 @@ namespace ProsperityGameWinApp2
             // 
             // skillTaskListView
             // 
-            this.skillTaskListView.HideSelection = false;
             this.skillTaskListView.Location = new System.Drawing.Point(14, 15);
             this.skillTaskListView.Name = "skillTaskListView";
             this.skillTaskListView.Size = new System.Drawing.Size(1275, 393);
@@ -1159,7 +1131,6 @@ namespace ProsperityGameWinApp2
             // 
             // healthTaskListView
             // 
-            this.healthTaskListView.HideSelection = false;
             this.healthTaskListView.Location = new System.Drawing.Point(14, 15);
             this.healthTaskListView.Name = "healthTaskListView";
             this.healthTaskListView.Size = new System.Drawing.Size(1275, 393);
@@ -1210,7 +1181,6 @@ namespace ProsperityGameWinApp2
             // 
             // financialProgressListView
             // 
-            this.financialProgressListView.HideSelection = false;
             this.financialProgressListView.Location = new System.Drawing.Point(19, 17);
             this.financialProgressListView.Name = "financialProgressListView";
             this.financialProgressListView.Size = new System.Drawing.Size(1275, 427);
@@ -1230,7 +1200,6 @@ namespace ProsperityGameWinApp2
             // 
             // careerProgressListView
             // 
-            this.careerProgressListView.HideSelection = false;
             this.careerProgressListView.Location = new System.Drawing.Point(14, 15);
             this.careerProgressListView.Name = "careerProgressListView";
             this.careerProgressListView.Size = new System.Drawing.Size(1275, 385);
@@ -1250,7 +1219,6 @@ namespace ProsperityGameWinApp2
             // 
             // bodyProgressListView
             // 
-            this.bodyProgressListView.HideSelection = false;
             this.bodyProgressListView.Location = new System.Drawing.Point(14, 17);
             this.bodyProgressListView.Name = "bodyProgressListView";
             this.bodyProgressListView.Size = new System.Drawing.Size(1275, 383);
@@ -1269,7 +1237,6 @@ namespace ProsperityGameWinApp2
             // 
             // attractiveProgressListView
             // 
-            this.attractiveProgressListView.HideSelection = false;
             this.attractiveProgressListView.Location = new System.Drawing.Point(14, 17);
             this.attractiveProgressListView.Name = "attractiveProgressListView";
             this.attractiveProgressListView.Size = new System.Drawing.Size(1275, 383);
@@ -1288,7 +1255,6 @@ namespace ProsperityGameWinApp2
             // 
             // spiritualProgressListView
             // 
-            this.spiritualProgressListView.HideSelection = false;
             this.spiritualProgressListView.Location = new System.Drawing.Point(14, 17);
             this.spiritualProgressListView.Name = "spiritualProgressListView";
             this.spiritualProgressListView.Size = new System.Drawing.Size(1275, 383);
@@ -1307,7 +1273,6 @@ namespace ProsperityGameWinApp2
             // 
             // educationalProgressListView
             // 
-            this.educationalProgressListView.HideSelection = false;
             this.educationalProgressListView.Location = new System.Drawing.Point(14, 17);
             this.educationalProgressListView.Name = "educationalProgressListView";
             this.educationalProgressListView.Size = new System.Drawing.Size(1275, 383);
@@ -1326,7 +1291,6 @@ namespace ProsperityGameWinApp2
             // 
             // personalityProgressListView
             // 
-            this.personalityProgressListView.HideSelection = false;
             this.personalityProgressListView.Location = new System.Drawing.Point(14, 17);
             this.personalityProgressListView.Name = "personalityProgressListView";
             this.personalityProgressListView.Size = new System.Drawing.Size(1275, 383);
@@ -1345,7 +1309,6 @@ namespace ProsperityGameWinApp2
             // 
             // relationalProgressListView
             // 
-            this.relationalProgressListView.HideSelection = false;
             this.relationalProgressListView.Location = new System.Drawing.Point(14, 17);
             this.relationalProgressListView.Name = "relationalProgressListView";
             this.relationalProgressListView.Size = new System.Drawing.Size(1275, 383);
@@ -1364,7 +1327,6 @@ namespace ProsperityGameWinApp2
             // 
             // skillProgressListView
             // 
-            this.skillProgressListView.HideSelection = false;
             this.skillProgressListView.Location = new System.Drawing.Point(14, 17);
             this.skillProgressListView.Name = "skillProgressListView";
             this.skillProgressListView.Size = new System.Drawing.Size(1275, 383);
@@ -1383,7 +1345,6 @@ namespace ProsperityGameWinApp2
             // 
             // healthProgressListView
             // 
-            this.healthProgressListView.HideSelection = false;
             this.healthProgressListView.Location = new System.Drawing.Point(14, 17);
             this.healthProgressListView.Name = "healthProgressListView";
             this.healthProgressListView.Size = new System.Drawing.Size(1275, 383);
@@ -1432,7 +1393,6 @@ namespace ProsperityGameWinApp2
             // 
             // buyListView
             // 
-            this.buyListView.HideSelection = false;
             this.buyListView.Location = new System.Drawing.Point(28, 54);
             this.buyListView.Name = "buyListView";
             this.buyListView.Size = new System.Drawing.Size(1275, 474);
@@ -1463,7 +1423,6 @@ namespace ProsperityGameWinApp2
             // 
             // activityListView
             // 
-            this.activityListView.HideSelection = false;
             this.activityListView.Location = new System.Drawing.Point(28, 55);
             this.activityListView.Name = "activityListView";
             this.activityListView.Size = new System.Drawing.Size(1275, 474);
@@ -1529,7 +1488,6 @@ namespace ProsperityGameWinApp2
             // 
             // financialThankListView
             // 
-            this.financialThankListView.HideSelection = false;
             this.financialThankListView.Location = new System.Drawing.Point(21, 6);
             this.financialThankListView.Name = "financialThankListView";
             this.financialThankListView.Size = new System.Drawing.Size(1275, 399);
@@ -1549,7 +1507,6 @@ namespace ProsperityGameWinApp2
             // 
             // careerThankListView
             // 
-            this.careerThankListView.HideSelection = false;
             this.careerThankListView.Location = new System.Drawing.Point(14, 9);
             this.careerThankListView.Name = "careerThankListView";
             this.careerThankListView.Size = new System.Drawing.Size(1275, 396);
@@ -1569,7 +1526,6 @@ namespace ProsperityGameWinApp2
             // 
             // bodyThankListView
             // 
-            this.bodyThankListView.HideSelection = false;
             this.bodyThankListView.Location = new System.Drawing.Point(14, 10);
             this.bodyThankListView.Name = "bodyThankListView";
             this.bodyThankListView.Size = new System.Drawing.Size(1275, 396);
@@ -1588,7 +1544,6 @@ namespace ProsperityGameWinApp2
             // 
             // attractiveThankListView
             // 
-            this.attractiveThankListView.HideSelection = false;
             this.attractiveThankListView.Location = new System.Drawing.Point(14, 10);
             this.attractiveThankListView.Name = "attractiveThankListView";
             this.attractiveThankListView.Size = new System.Drawing.Size(1275, 396);
@@ -1607,7 +1562,6 @@ namespace ProsperityGameWinApp2
             // 
             // spiritualThankListView
             // 
-            this.spiritualThankListView.HideSelection = false;
             this.spiritualThankListView.Location = new System.Drawing.Point(14, 10);
             this.spiritualThankListView.Name = "spiritualThankListView";
             this.spiritualThankListView.Size = new System.Drawing.Size(1275, 396);
@@ -1626,7 +1580,6 @@ namespace ProsperityGameWinApp2
             // 
             // educationalThankListView
             // 
-            this.educationalThankListView.HideSelection = false;
             this.educationalThankListView.Location = new System.Drawing.Point(14, 10);
             this.educationalThankListView.Name = "educationalThankListView";
             this.educationalThankListView.Size = new System.Drawing.Size(1275, 396);
@@ -1645,7 +1598,6 @@ namespace ProsperityGameWinApp2
             // 
             // personalityThankListView
             // 
-            this.personalityThankListView.HideSelection = false;
             this.personalityThankListView.Location = new System.Drawing.Point(14, 10);
             this.personalityThankListView.Name = "personalityThankListView";
             this.personalityThankListView.Size = new System.Drawing.Size(1275, 396);
@@ -1664,7 +1616,6 @@ namespace ProsperityGameWinApp2
             // 
             // relationalThankListView
             // 
-            this.relationalThankListView.HideSelection = false;
             this.relationalThankListView.Location = new System.Drawing.Point(14, 10);
             this.relationalThankListView.Name = "relationalThankListView";
             this.relationalThankListView.Size = new System.Drawing.Size(1275, 396);
@@ -1683,7 +1634,6 @@ namespace ProsperityGameWinApp2
             // 
             // skillThankListView
             // 
-            this.skillThankListView.HideSelection = false;
             this.skillThankListView.Location = new System.Drawing.Point(14, 10);
             this.skillThankListView.Name = "skillThankListView";
             this.skillThankListView.Size = new System.Drawing.Size(1275, 396);
@@ -1702,7 +1652,6 @@ namespace ProsperityGameWinApp2
             // 
             // healthThankListView
             // 
-            this.healthThankListView.HideSelection = false;
             this.healthThankListView.Location = new System.Drawing.Point(14, 10);
             this.healthThankListView.Name = "healthThankListView";
             this.healthThankListView.Size = new System.Drawing.Size(1275, 396);
@@ -1785,7 +1734,7 @@ namespace ProsperityGameWinApp2
             // btnAddBuy
             // 
             this.btnAddBuy.Font = new System.Drawing.Font("IRANSans", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnAddBuy.Location = new System.Drawing.Point(328, 26);
+            this.btnAddBuy.Location = new System.Drawing.Point(212, 25);
             this.btnAddBuy.Name = "btnAddBuy";
             this.btnAddBuy.Size = new System.Drawing.Size(123, 40);
             this.btnAddBuy.TabIndex = 10;
@@ -1796,7 +1745,7 @@ namespace ProsperityGameWinApp2
             // btnAddActivity
             // 
             this.btnAddActivity.Font = new System.Drawing.Font("IRANSans", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnAddActivity.Location = new System.Drawing.Point(158, 25);
+            this.btnAddActivity.Location = new System.Drawing.Point(70, 25);
             this.btnAddActivity.Name = "btnAddActivity";
             this.btnAddActivity.Size = new System.Drawing.Size(123, 40);
             this.btnAddActivity.TabIndex = 11;
@@ -1804,11 +1753,23 @@ namespace ProsperityGameWinApp2
             this.btnAddActivity.UseVisualStyleBackColor = true;
             this.btnAddActivity.Click += new System.EventHandler(this.btnAddActivity_Click);
             // 
+            // btnCalculate
+            // 
+            this.btnCalculate.Font = new System.Drawing.Font("IRANSans", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnCalculate.Location = new System.Drawing.Point(481, 26);
+            this.btnCalculate.Name = "btnCalculate";
+            this.btnCalculate.Size = new System.Drawing.Size(93, 40);
+            this.btnCalculate.TabIndex = 12;
+            this.btnCalculate.Text = "محاسبه";
+            this.btnCalculate.UseVisualStyleBackColor = true;
+            this.btnCalculate.Click += new System.EventHandler(this.btnCalculate_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1362, 708);
+            this.Controls.Add(this.btnCalculate);
             this.Controls.Add(this.btnAddActivity);
             this.Controls.Add(this.btnAddBuy);
             this.Controls.Add(this.label5);
@@ -2047,6 +2008,7 @@ namespace ProsperityGameWinApp2
         private System.Windows.Forms.ListView healthThankListView;
         private System.Windows.Forms.ComboBox cbTaskPeriority;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnCalculate;
     }
 }
 

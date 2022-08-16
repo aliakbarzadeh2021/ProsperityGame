@@ -21,23 +21,14 @@ namespace ProsperityGameWinApp2
             RefreshCreditValue();
             
             LoadStartDate();
-            LoadComboBox();
-            
+            LoadComboBox();            
         }
-
-        
+                
 
         private void LoadStartDate()
         {
             StartDate = _mongoRepository.GetStartDate();
             lblStartDate.Text = ConvertDate(StartDate);
-        }
-
-        private int GetDaysFromStart()
-        {
-            var days = (DateTime.Now.Date - StartDate).TotalDays;
-            var castDays = (int)Math.Ceiling(days);
-            return castDays == 0 ? 1 : castDays;
         }
 
         private string ConvertDate(DateTime d)
@@ -51,23 +42,11 @@ namespace ProsperityGameWinApp2
             var amount = _mongoRepository.GetTotalCredit();
             lblCashAmount.Text = $@"{amount:n0}";
         }
-
-        private void InsertTask(double money, string description)
-        {
-            _mongoRepository.Insert(new ProsperityStatus()
-            {
-                Id = new ObjectId(),
-                CreditValue = money * 1000 * GetDaysFromStart(),
-                Date = DateTime.Now.Date,
-                Description = description,
-                DaysFromStart = GetDaysFromStart()
-            });
-            RefreshCreditValue();
-        }
+              
 
         private void btnAddBuy_Click(object sender, EventArgs e)
         {
-            AddBuy form = new AddBuy();
+            AddBuy form = new AddBuy(_mongoRepository, StartDate);
             form.Show(); 
             mainTabControl.SelectedTab = mainTabControl.TabPages[1];
             targetTabControl.SelectedTab = targetTabControl.TabPages[5];
@@ -75,7 +54,7 @@ namespace ProsperityGameWinApp2
 
         private void btnAddActivity_Click(object sender, EventArgs e)
         {
-            AddActivity form = new AddActivity();
+            AddActivity form = new AddActivity(_mongoRepository, StartDate);
             form.Show();
         }
 
@@ -126,11 +105,6 @@ namespace ProsperityGameWinApp2
             LoadActivityListView();
         }
 
-        private void btnAddThank_Click(object sender, EventArgs e)
-        {
-             
-        }
-
         private void btnShowThank_Click(object sender, EventArgs e)
         {
             LoadThankListView();
@@ -164,7 +138,20 @@ namespace ProsperityGameWinApp2
 
         private void LoadBuyListView()
         {
-            throw new NotImplementedException();
+            var list = _mongoRepository.GetBuyList();
+            var result = new List<ListViewItem>();
+            foreach (var item in list)
+            {
+                var record = new ListViewItem(item.Id.ToString());
+                record.SubItems.Add(item.Description);
+                record.SubItems.Add(ConvertDate(item.Date));
+                record.SubItems.Add(item.CreditValue.ToString());
+                record.SubItems.Add(item.DaysFromStart.ToString());
+
+                result.Add(record);
+            }
+            buyListView.Items.Clear();
+            buyListView.Items.AddRange(result.ToArray());
         }
 
         private void LoadGoalListView()
@@ -214,6 +201,9 @@ namespace ProsperityGameWinApp2
 
                 result.Add(record);
             }
+            cbSelectGoal.DataSource = list.ToList();
+            cbSelectGoal.DisplayMember = "title";
+
             return result.ToArray();
         }
 
@@ -263,6 +253,10 @@ namespace ProsperityGameWinApp2
 
                 result.Add(record);
             }
+
+            cbSelectTarget.DataSource = list.ToList();
+            cbSelectTarget.DisplayMember = "title";
+
             return result.ToArray();
         }
 
@@ -366,11 +360,51 @@ namespace ProsperityGameWinApp2
 
         private void LoadActivityListView()
         {
-            
+            var list = _mongoRepository.GetUserActivitysList();
+            var result = new List<ListViewItem>();
+            foreach (var item in list)
+            {
+                var record = new ListViewItem(item.Id.ToString());
+                record.SubItems.Add(item.Title);
+                record.SubItems.Add(ConvertDate(item.Date));
+                record.SubItems.Add(item.Time.ToString());
+
+                result.Add(record);
+            }
+            activityListView.Items.Clear();
+            activityListView.Items.AddRange(result.ToArray());
         }
         private void LoadThankListView()
         {
-            
+            financialThankListView.Items.Clear();
+            financialThankListView.Items.AddRange(GetProgressListView(Category.Financial));
+
+            attractiveThankListView.Items.Clear();
+            attractiveThankListView.Items.AddRange(GetProgressListView(Category.Attractive));
+
+            bodyThankListView.Items.Clear();
+            bodyThankListView.Items.AddRange(GetProgressListView(Category.Body));
+
+            careerThankListView.Items.Clear();
+            careerThankListView.Items.AddRange(GetProgressListView(Category.Career));
+
+            educationalThankListView.Items.Clear();
+            educationalThankListView.Items.AddRange(GetProgressListView(Category.Education));
+
+            healthThankListView.Items.Clear();
+            healthThankListView.Items.AddRange(GetProgressListView(Category.Health));
+
+            personalityThankListView.Items.Clear();
+            personalityThankListView.Items.AddRange(GetProgressListView(Category.Personality));
+
+            relationalThankListView.Items.Clear();
+            relationalThankListView.Items.AddRange(GetProgressListView(Category.Relational));
+
+            skillThankListView.Items.Clear();
+            skillThankListView.Items.AddRange(GetProgressListView(Category.Skill));
+
+            spiritualThankListView.Items.Clear();
+            spiritualThankListView.Items.AddRange(GetProgressListView(Category.Spiritual));
         }
 
         private void LoadBuyReport()
@@ -894,5 +928,15 @@ namespace ProsperityGameWinApp2
             spiritualProgressListView.Columns.Add("روز", 80);
         }
 
+        private void btnAddThank_Click(object sender, EventArgs e)
+        {
+            var title = txtThankTitle.Text;
+            _mongoRepository.AddThank(title);
+        }
+
+        private void btnCalculate_Click(object sender, EventArgs e)
+        {
+            RefreshCreditValue();
+        }
     }
 }
